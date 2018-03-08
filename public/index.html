@@ -18,15 +18,11 @@
   <script src="/lib/react-dom.development.js"></script>
   <link href="http://localhost:3001/dist/bundle.css" rel="stylesheet"></link>
   <script src="http://localhost:3001/dist/bundle.js"></script>
-  <script src="http://localhost:3002/dist/index_bundle.js"></script>
+  <script src="http://localhost:3002/index_bundle.js"></script>
   <script src="http://localhost:3003/dist/bundle.js"></script>
   <script src="http://localhost:3004/bundle.js"></script>
   <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
   <script>
-    ReactDOM.render(
-      React.createElement(SimilarListings, { id: 0 }),
-      document.getElementById('similar-listings')
-    );
     ReactDOM.render(
       React.createElement(Amenities),
       document.getElementById('amenities')
@@ -35,10 +31,11 @@
       React.createElement(Bookings),
       document.getElementById('bookings')
     );
-      // ReactDOM.render(
-      //   React.createElement(Reviews),
-      //   document.getElementById('reviews')
-      // );
+    ReactDOM.render(
+      React.createElement(SimilarListings, { id: 0 }),
+      document.getElementById('similar-listings')
+    );
+
   </script>
 </body>
 
